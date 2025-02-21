@@ -35,7 +35,6 @@ pip install scikit-learn
   love: 0.01
   neutral: 0.00
   sadness: 0.01
-  surprise: 0.00
   ```
 
 ## Обучение модели
