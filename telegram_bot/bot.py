@@ -34,7 +34,8 @@ def handle_message(message):
         # Формируем ответ модели
         response = f"Sentiment: {predicted_class}\nProbabilities:\n"
         for i, label in enumerate(label_encoder.classes_):
-            response += f"{label}: {probabilities[i]:.2f}\n"
+            if probabilities[i] >= 0.05:
+                response += f"{label}: {probabilities[i]:.2f}\n"
     
         # Отвечаем на сообщение пользователя
         bot.reply_to(message, response)
