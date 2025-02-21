@@ -33,7 +33,6 @@
   anger: 0.02
   fear: 0.00
   joy: 0.96
-  love: 0.01
   neutral: 0.00
   sadness: 0.01
   ```
