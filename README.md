@@ -11,21 +11,18 @@
 ## Использование
 #### Username бота - @nlp_feelings_analyzer_bot
 
-### ВАЖНО
-Перед запуском необходимо установить зависимости:
-```bash
-pip install telebot
-pip install joblib
-pip install tensorflow
-pip install pandas
-pip install scikit-learn
-```
-
 Чтобы запустить телеграмм-бота достаточно:
-- скачать репозиторий
-- установить зависимости(пункт ВАЖНО выше)
-- запустить файл [/telegram-bot/bot.py](telegram_bot/bot.py)
-Модель уже обучена, никаких дополнительный действий не требуется.
+1. Cкачать репозиторий
+2. Установить зависимости:
+ ```bash
+  pip install telebot
+  pip install joblib
+  pip install tensorflow
+  pip install pandas
+  pip install scikit-learn
+  ```
+3. Запустить файл [/telegram-bot/bot.py](telegram_bot/bot.py)
+- Модель уже обучена, никаких дополнительный действий не требуется.
 
 ### Пример использования
 - Сообщение пользователя: I'm proud of my achievements
