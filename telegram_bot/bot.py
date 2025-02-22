@@ -32,7 +32,8 @@ def handle_message(message):
         probabilities = prediction.flatten()
     
         # Формируем ответ модели
-        response = f"Sentiment: {predicted_class}\nProbabilities:\n"
+        response = f"Sentiment: {predicted_class}\n"
+        response += "Probabilities:\n"
         for i, label in enumerate(label_encoder.classes_):
             if probabilities[i] >= 0.05:
                 response += f"{label}: {probabilities[i]:.2f}\n"
