@@ -23,6 +23,7 @@
   ```
 3. Запустить файл [/telegram-bot/bot.py](telegram_bot/bot.py)
 - Модель уже обучена, никаких дополнительный действий не требуется.
+- Если у вас возникла ошибка при установке *tenserflow*, воспользуйтесь ```https://pythonguides.com/install-tensorflow/```
 
 ### Пример использования
 - Сообщение пользователя: I'm proud of my achievements
