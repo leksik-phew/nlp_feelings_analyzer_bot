@@ -30,13 +30,21 @@ def handle_message(message):
         predicted_label = np.argmax(prediction)
         predicted_class = label_encoder.inverse_transform([predicted_label])[0]
         probabilities = prediction.flatten()
+
+        # Вычисляю вероятность эмоции в процентах
+        percent_probabilities = []
+        for i in probabilities:
+            percent = round(float(i) * 100, 2)
+            percent_probabilities.append(percent)
+
+        # Эмоции в текстовом виде (anger, fear, joy, love, sadness, surprise)
+        emojies = ['\U0001F621', '\U0001F631', '\U0001F603', '\U0001F60D', '\U0001F614', '\U0001F62E']
     
         # Формируем ответ модели
-        response = f"Sentiment: {predicted_class}\n"
+        response = f"Sentiment: {predicted_class}{emojies[predicted_label]}\n"
         response += "Probabilities:\n"
         for i, label in enumerate(label_encoder.classes_):
-            if probabilities[i] >= 0.05:
-                response += f"{label}: {probabilities[i]:.2f}\n"
+            response += f"{emojies[i]}: {percent_probabilities[i]}%\n"
     
         # Отвечаем на сообщение пользователя
         bot.reply_to(message, response)
