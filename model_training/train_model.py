@@ -7,8 +7,13 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 import tensorflow as tf
 import joblib
 
-# Загружаю данные из файла train.txt с разделителем ';' и указанием названий столбцов
-data = pd.read_csv('train.txt', sep=';', header=None, names=['text', 'label'])
+# Загружаю данные из файла train.parquet, указываю названия столбцов
+data = pd.read_parquet("train.parquet")
+data.columns = ["text", "label"]
+
+# Меняю изначальные данные для успешной дальнейшей кодировки
+labels = {0: "sadness", 1: "joy", 2: "love", 3: "anger", 4: "fear", 5: "surprise"}
+data["label"] = data["label"].map(labels)
 
 # Кодирую метки классов в числовые значения
 label_encoder = LabelEncoder()
