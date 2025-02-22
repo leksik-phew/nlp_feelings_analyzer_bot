@@ -28,16 +28,8 @@
 - Если у вас возникла проблема при установке *tensorflow*, воспользуйтесь ```https://pythonguides.com/install-tensorflow/```
 
 ### ✨Пример использования✨
-- Сообщение пользователя: I'm proud of my achievements
-- Ответ бота:
-  ```
-  Sentiment: joy
-  Probabilities:
-  anger: 0.02
-  fear: 0.00
-  joy: 0.96
-  sadness: 0.01
-  ```
+![usage](https://github.com/user-attachments/assets/17efbc34-e83c-45e0-9cbe-c583ea4f3ef5)
+
 
 ## ✨Обучение модели✨
 Скрипт для обучения модели - [/model_training/train_model.py](model_training/train_model.py). Для обучения модели я использовал не файл, который приложен к заданию, а  [Emotion Dataset from Hugging Face](https://huggingface.co/datasets/dair-ai/emotion). Датасет состит из 2 колонок( Text, Label ) и содержит 6 эмоций: Sadness, Joy, Anger, Fear, Surprise, Love. Загрузить файл я не могу из-за вот такой проблемы: ```Yowza, that’s a big file. Try again with a file smaller than 25MB.```, но вы можете скачать его с помощью моего [яндекс диска](https://disk.yandex.ru/d/MerBWEFjI0-VNw): ```https://disk.yandex.ru/d/MerBWEFjI0-VNw```
