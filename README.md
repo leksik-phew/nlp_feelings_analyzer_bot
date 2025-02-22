@@ -39,4 +39,4 @@
   ```
 
 ## Обучение модели
-Скрипт для обучения модели - [/model_training/train_model.py](model_training/train_model.py). Для обучения модели я использовал файл [/model_training/train.txt](/model_training/train.txt), который содержит фразы форматом: {phrase};{feeling}. Скрипт нацелен на обучение с помощью таких файлов. 
+Скрипт для обучения модели - [/model_training/train_model.py](model_training/train_model.py). Для обучения модели я использовал не файл, который приложен к заданию, а  [Emotion Dataset from Hugging Face](https://huggingface.co/datasets/dair-ai/emotion). Датасет состит из 2 колонок( Text, Label ) и содержит 6 эмоций: Sadness, Joy, Anger, Fear, Surprise, Love. Загрузить файл я не могу из-за вот такой проблемы: ```Yowza, that’s a big file. Try again with a file smaller than 25MB.```, но вы можете скачать его с помощью моего яндекс диска: ```тут будет ссылка```
