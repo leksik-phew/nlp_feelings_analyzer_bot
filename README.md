@@ -20,6 +20,8 @@
   pip install tensorflow
   pip install pandas
   pip install scikit-learn
+  pip install pyarrow
+  pip install fastparquet
   ```
 3. Запустить файл [/telegram-bot/bot.py](telegram_bot/bot.py)
 - Модель уже обучена, никаких дополнительный действий не требуется.
@@ -34,9 +36,8 @@
   anger: 0.02
   fear: 0.00
   joy: 0.96
-  neutral: 0.00
   sadness: 0.01
   ```
 
 ## Обучение модели
-Скрипт для обучения модели - [/model_training/train_model.py](model_training/train_model.py). Для обучения модели я использовал не файл, который приложен к заданию, а  [Emotion Dataset from Hugging Face](https://huggingface.co/datasets/dair-ai/emotion). Датасет состит из 2 колонок( Text, Label ) и содержит 6 эмоций: Sadness, Joy, Anger, Fear, Surprise, Love. Загрузить файл я не могу из-за вот такой проблемы: ```Yowza, that’s a big file. Try again with a file smaller than 25MB.```, но вы можете скачать его с помощью моего яндекс диска: ```тут будет ссылка```
+Скрипт для обучения модели - [/model_training/train_model.py](model_training/train_model.py). Для обучения модели я использовал не файл, который приложен к заданию, а  [Emotion Dataset from Hugging Face](https://huggingface.co/datasets/dair-ai/emotion). Датасет состит из 2 колонок( Text, Label ) и содержит 6 эмоций: Sadness, Joy, Anger, Fear, Surprise, Love. Загрузить файл я не могу из-за вот такой проблемы: ```Yowza, that’s a big file. Try again with a file smaller than 25MB.```, но вы можете скачать его с помощью моего [яндекс диска](https://disk.yandex.ru/d/MerBWEFjI0-VNw): ```https://disk.yandex.ru/d/MerBWEFjI0-VNw```
